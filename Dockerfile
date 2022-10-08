@@ -1,19 +1,18 @@
-FROM golang:1.19 as build
+FROM golang:1.19-alpine
 
-WORKDIR /app
+RUN apk add --no-cache git
 
-COPY go.mod ./
-COPY go.sum ./
-COPY main.go ./
+WORKDIR /app/api
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o main.go
+COPY go.mod .
+COPY go.sum .
 
-FROM scratch
+RUN go mod download
 
-WORKDIR /
+COPY . .
 
-COPY --from=build /app /app
+RUN go build -o ./api .
 
 EXPOSE 8080
 
-CMD ["./"]
+CMD ["./api"]
