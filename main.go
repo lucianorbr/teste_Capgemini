@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/gofiber/fiber/v2"
 	"github.com/lucianorbr/teste_Capgemini/controllers/functions"
 	"log"
@@ -22,17 +21,7 @@ var letters = []string{
 	"XXXXXX",
 }
 
-//var resultisvalid = functions.CountIsValid(letters)
-//var resultratio = functions.CountRatio(letters)
-//var resultinvalid = functions.CountInValid(letters)
-
-//fmt.Printf("{\"is_valid\": %v}\n", functions.IsValid(letters[i]))
-
 func main() {
-
-	for i := 0; i < len(letters); i++ {
-		fmt.Printf("{\"is_valid\": %v}\n", functions.IsValid(letters[i]))
-	}
 
 	app := fiber.New()
 
