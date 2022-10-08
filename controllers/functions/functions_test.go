@@ -1,6 +1,8 @@
-package controllers
+package functions
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestIsValid(t *testing.T) {
 	test := []struct {

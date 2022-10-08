@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/lucianorbr/teste_Capgemini/controllers"
+	"github.com/lucianorbr/teste_Capgemini/controllers/functions"
 )
 
 var letters = []string{
@@ -21,14 +20,14 @@ var letters = []string{
 	"XXXXXX",
 }
 
-var resultisvalid = controllers.CountIsValid(letters)
-var resultratio = controllers.CountRatio(letters)
-var resultinvalid = controllers.CountInValid(letters)
+var resultisvalid = functions.CountIsValid(letters)
+var resultratio = functions.CountRatio(letters)
+var resultinvalid = functions.CountInValid(letters)
 
 func main() {
 
 	for i := 0; i < len(letters); i++ {
-		fmt.Printf("{\"is_valid\": %v}\n", controllers.IsValid(letters[i]))
+		fmt.Printf("{\"is_valid\": %v}\n", functions.IsValid(letters[i]))
 	}
 
 	fmt.Printf("{\"count_valid\": %d}\n", resultisvalid)
