@@ -3,23 +3,9 @@ package main
 import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/lucianorbr/teste_Capgemini/controllers/functions"
+	"github.com/lucianorbr/teste_Capgemini/db"
 	"log"
 )
-
-var letters = []string{
-	"DUHBHB",
-	"DUBUHD",
-	"UBUUHU",
-	"BHBDHH",
-	"DDDDUB",
-	"UDBDUH",
-	"NNNNNN",
-	"MMMMMN",
-	"NNNNNN",
-	"HHHHHH",
-	"YYYYYY",
-	"XXXXXX",
-}
 
 func main() {
 
@@ -27,17 +13,18 @@ func main() {
 
 	app.Get("/stats", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{
-			"count_valid":   functions.CountIsValid(letters),
-			"count_invalid": functions.CountInValid(letters),
-			"ratio":         functions.CountRatio(letters),
+			"count_valid":   functions.CountIsValid(db.Letters),
+			"count_invalid": functions.CountInValid(db.Letters),
+			"ratio":         functions.CountRatio(db.Letters),
 		})
 	})
 
 	app.Get("/sequence", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{
-			"letters": letters,
+			"letters": db.Letters,
 		})
 	})
 
 	log.Fatal(app.Listen(":3000"))
+
 }
