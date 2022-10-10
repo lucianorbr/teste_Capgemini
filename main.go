@@ -12,6 +12,7 @@ func main() {
 
 	app.Get("/stats", handlers.Stats)
 	app.Get("/sequence", handlers.Sequence)
+	app.Get("/valid", handlers.Valid)
 
 	log.Fatal(app.Listen(":3000"))
 }
