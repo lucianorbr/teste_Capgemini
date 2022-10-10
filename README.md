@@ -79,7 +79,7 @@ $ git clone < https://github.com/lucianorbr/teste_Capgemini
 # Acesse a pasta do projeto no terminal/cmd
 $ cd teste_Capgemini
 
-# Execute o comando abaixo para subir a aplicação
+# Execute o comando abaixo para efetuar o build da imagem
 docker build . -t 'nome da image'
 
 # Execute o comando abaixo para subir a aplicação
