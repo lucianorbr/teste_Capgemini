@@ -14,7 +14,7 @@ func TestRatio(t *testing.T) {
 			"BHBDHH",
 			"DDDDUB",
 			"UDBDUH",
-			"NNNNNN",
+			"OOOOOO",
 			"MMMMMN",
 			"NNNNNN",
 			"HHHHHH",

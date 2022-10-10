@@ -7,7 +7,7 @@ var Letters = []string{
 	"BHBDHH",
 	"DDDDUB",
 	"UDBDUH",
-	"NNNNNN",
+	"OOOOOO",
 	"MMMMMN",
 	"NNNNNN",
 	"HHHHHH",

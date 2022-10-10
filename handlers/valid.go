@@ -7,17 +7,19 @@ import (
 )
 
 func Valid(c *fiber.Ctx) error {
-	for i := 0; i < len(db.Letters); i++ {
-		//fmt.Printf("{\"is_valid\": %v}\n", functions.IsValid(db.Letters[i]))
+	return c.JSON(fiber.Map{
 
-		//return all JSON Letters
-
-		//return c.JSON(fmt.Sprintf("{\"is_valid\": %v}", functions.IsValid(db.Letters[i])))
-
-		return c.JSON(fiber.Map{
-			"is_valid": functions.IsValid(db.Letters[i]),
-		})
-	}
-
-	return nil
+		"DUHBHB - is_valid": functions.IsValid(db.Letters[0]),
+		"DUBUHD - is_valid": functions.IsValid(db.Letters[1]),
+		"UBUUHU - is_valid": functions.IsValid(db.Letters[2]),
+		"BHBDHH - is_valid": functions.IsValid(db.Letters[3]),
+		"DDDDUB - is_valid": functions.IsValid(db.Letters[4]),
+		"UDBDUH - is_valid": functions.IsValid(db.Letters[5]),
+		"OOOOOO - is_valid": functions.IsValid(db.Letters[6]),
+		"MMMMMN - is_valid": functions.IsValid(db.Letters[7]),
+		"NNNNNN - is_valid": functions.IsValid(db.Letters[8]),
+		"HHHHHH - is_valid": functions.IsValid(db.Letters[9]),
+		"YYYYYY - is_valid": functions.IsValid(db.Letters[10]),
+		"XXXXXX - is_valid": functions.IsValid(db.Letters[11]),
+	})
 }
