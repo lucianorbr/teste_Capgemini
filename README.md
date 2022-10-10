@@ -2,7 +2,7 @@
 O projeto consiste em desenvolver uma API REST em Go.
 </h1>
 
-## Participantes
+## Autor
 
 [Luciano Ribeiro](https://github.com/lucianorbr)
 
@@ -62,4 +62,51 @@ sequências válidas em relação ao total. Segue exemplo da resposta:
 Construir um Docker composse para executar a API, para possibilitar a execução em qualquer 
 ambiente. 
 </p>
+
+# Como executar o projeto
+
+## Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Docker](https://www.docker.com/).
+
+## Rodando a aplicação
+
+```bash
+# Clone este repositório
+$ git clone < https://github.com/lucianorbr/teste_Capgemini
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd teste_Capgemini
+
+# Execute o comando abaixo para subir a aplicação
+docker build . -t 'nome da image'
+
+# Execute o comando abaixo para subir a aplicação
+docker run -p 3000:3000 'nome da image'
+
+# O servidor inciará na porta:8080 - acesse <http://localhost:8080>
+```
+
+## Sobre a aplicação
+
+```bash
+A aplicação foi desenvolvida em Go, utilizando o framework Fiber, e o banco de dados foi utilizado um arquivo .go nomeado de letters.go.
+
+## Endpoints
+- GET /sequence - Retorna um JSON com a sequência de letras e se é válida ou não.
+![img_1.png](img_1.png)
+
+- GET /stats - Retorna um JSON que retorna as estatísticas de verificações de sequências, onde deve informar a 
+quantidade de sequências válidas, quantidade de sequências inválidas, e a proporção de 
+sequências válidas em relação ao total.
+
+- GET /valid - Retorna um JSON com toda a sequência de letras válidas armazenadas no bando de dados letters.go e informa se a sequência é válida ou não.
+```
+
+
+
+
+
+
 
