@@ -85,24 +85,30 @@ docker build . -t 'nome da image'
 # Execute o comando abaixo para subir a aplicação
 docker run -p 3000:3000 'nome da image'
 
-# O servidor inciará na porta:8080 - acesse <http://localhost:8080>
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
 
 ## Sobre a aplicação
 
-```bash
+
 A aplicação foi desenvolvida em Go, utilizando o framework Fiber, e o banco de dados foi utilizado um arquivo .go nomeado de letters.go.
 
 ## Endpoints
-- GET /sequence - Retorna um JSON com a sequência de letras e se é válida ou não.
-![img_1.png](img_1.png)
+- GET /sequence - Retorna um JSON com a sequência de letras.
+
+![img_6.png](img_6.png)
 
 - GET /stats - Retorna um JSON que retorna as estatísticas de verificações de sequências, onde deve informar a 
 quantidade de sequências válidas, quantidade de sequências inválidas, e a proporção de 
 sequências válidas em relação ao total.
 
+![img_4.png](img_4.png)
+
 - GET /valid - Retorna um JSON com toda a sequência de letras válidas armazenadas no bando de dados letters.go e informa se a sequência é válida ou não.
-```
+
+![img_7.png](img_7.png)
+
+
 
 
 
