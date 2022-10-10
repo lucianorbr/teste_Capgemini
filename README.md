@@ -96,17 +96,17 @@ A aplicação foi desenvolvida em Go, utilizando o framework Fiber, e o banco de
 ## Endpoints
 - GET /sequence - Retorna um JSON com a sequência de letras.
 
-![img_6.png](img_6.png)
+![img_6.png](assets/sequence.png)
 
 - GET /stats - Retorna um JSON que retorna as estatísticas de verificações de sequências, onde deve informar a 
 quantidade de sequências válidas, quantidade de sequências inválidas, e a proporção de 
 sequências válidas em relação ao total.
 
-![img_4.png](img_4.png)
+![img_4.png](assets/stats.png)
 
 - GET /valid - Retorna um JSON com toda a sequência de letras válidas armazenadas no bando de dados letters.go e informa se a sequência é válida ou não.
 
-![img_7.png](img_7.png)
+![img_7.png](assets/valid.png)
 
 
 
