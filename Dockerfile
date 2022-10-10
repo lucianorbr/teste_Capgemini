@@ -13,6 +13,6 @@ COPY . .
 
 RUN go build -o ./api .
 
-EXPOSE 8080
+EXPOSE 3000
 
 CMD ["./api"]
