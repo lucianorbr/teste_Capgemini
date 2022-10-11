@@ -6,6 +6,8 @@ import (
 	"github.com/lucianorbr/teste_Capgemini/db"
 )
 
+// Provide another endpoint "/stats" that responds to an HTTP GET. The answer must be a
+// JSON that returns the stats of string checks
 func Stats(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{
 		"count_valid":   functions.CountIsValid(db.Letters),

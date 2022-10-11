@@ -4,6 +4,7 @@ import (
 	"strings"
 )
 
+// IsValid checks if a string is valid
 func IsValid(s string) bool {
 	if len(s) <= 4 {
 		return false

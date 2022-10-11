@@ -6,6 +6,8 @@ import (
 	"github.com/lucianorbr/teste_Capgemini/db"
 )
 
+// Returns a JSON endpoint "/valid" that shows the entire sequence stored in the database
+// and returns whether it is valid or not.
 func Valid(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{
 
